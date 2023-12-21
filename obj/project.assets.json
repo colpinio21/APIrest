@@ -97,6 +97,23 @@
           }
         }
       },
+      "MySqlConnector/2.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.1",
+          "System.Diagnostics.DiagnosticSource": "7.0.2"
+        },
+        "compile": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Npgsql/8.0.1": {
         "type": "package",
         "dependencies": {
@@ -582,6 +599,35 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "MySqlConnector/2.3.3": {
+      "sha512": "RmzpYUKmvf/hJcAOcymU+cUg6OopL+99q7P27hniyw2Nu907DBLsEZVejpqhBLI2qAYgEk9fKC9yn46vkQEUfQ==",
+      "type": "package",
+      "path": "mysqlconnector/2.3.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/MySqlConnector.dll",
+        "lib/net462/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net48/MySqlConnector.dll",
+        "lib/net48/MySqlConnector.xml",
+        "lib/net6.0/MySqlConnector.dll",
+        "lib/net6.0/MySqlConnector.xml",
+        "lib/net7.0/MySqlConnector.dll",
+        "lib/net7.0/MySqlConnector.xml",
+        "lib/net8.0/MySqlConnector.dll",
+        "lib/net8.0/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.2.3.3.nupkg.sha512",
+        "mysqlconnector.nuspec"
       ]
     },
     "Npgsql/8.0.1": {
@@ -1093,6 +1139,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "MySqlConnector >= 2.3.3",
       "Npgsql >= 8.0.1",
       "Swashbuckle.AspNetCore >= 6.1.4",
       "System.Data.SqlClient >= 4.8.5"
@@ -1137,6 +1184,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "MySqlConnector": {
+            "target": "Package",
+            "version": "[2.3.3, )"
+          },
           "Npgsql": {
             "target": "Package",
             "version": "[8.0.1, )"

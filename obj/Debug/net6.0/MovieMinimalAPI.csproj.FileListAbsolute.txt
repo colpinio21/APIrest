@@ -44,3 +44,4 @@ C:\Users\Alexis\Desktop\Simplon\streamingProject\MovieMinimalAPI\MovieMinimalAPI
 C:\Users\Alexis\Desktop\Simplon\streamingProject\MovieMinimalAPI\MovieMinimalAPI\obj\Debug\net6.0\MovieMinimalAPI.pdb
 C:\Users\Alexis\Desktop\Simplon\streamingProject\MovieMinimalAPI\MovieMinimalAPI\obj\Debug\net6.0\MovieMinimalAPI.genruntimeconfig.cache
 C:\Users\Alexis\Desktop\Simplon\streamingProject\MovieMinimalAPI\MovieMinimalAPI\obj\Debug\net6.0\ref\MovieMinimalAPI.dll
+C:\Users\Alexis\Desktop\Simplon\streamingProject\MovieMinimalAPI\MovieMinimalAPI\bin\Debug\net6.0\MySqlConnector.dll

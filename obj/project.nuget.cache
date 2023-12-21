@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jlTCwftF4FcTwPyqeg5Hwo8bQ23eFzAFMec6A6mj5NdBWOO8IiP+7Z9nZIjeJ5QUCnbntJMMk2eFODabOEgMmA==",
+  "dgSpecHash": "2YAXwx3imJDQj0TWyba5TARUFCrtwIz02TxLBV2o30H8V5Zj3EB4l9J8FEHIqlTKb3i8wRadYD9u6pTso1n0tg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexis\\Desktop\\Simplon\\streamingProject\\MovieMinimalAPI\\MovieMinimalAPI\\MovieMinimalAPI.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Alexis\\.nuget\\packages\\mysqlconnector\\2.3.3\\mysqlconnector.2.3.3.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\npgsql\\8.0.1\\npgsql.8.0.1.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\Alexis\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

@@ -1,5 +1,6 @@
 using System.Data.Common;
 using Microsoft.OpenApi.Models;
+using MySqlConnector;
 using Npgsql;
 
 namespace MovieMinimalAPI
@@ -40,39 +41,39 @@ namespace MovieMinimalAPI
             {
 
             });
-            app.MapGet("/movies", GetAllMovie);
+            app.MapGet("/movies", GetAllMovies);
 
             app.Run();
         }
 
-        private static Movie[] GetAllMovie()
+        private static IEnumerable<Movie> GetAllMovies()
         {
-            List<Movie> movies = new();
+            var movies = new List<Movie>();
 
-            var connectionPgSqlString = "Host=localhost;Port=5432;Username=postgres;Password=admin;Database=Streaming;Pooling=true;";
-            //string connectionMySqlString = "TODO";
-            //string connectionMsSqlString = "TODO";
+            var connectionString = "Server=localhost;Database=streaming;Uid=alexiscolp;Pwd=enwnzk24b;";
+            using var connection = new MySqlConnection(connectionString);
+            connection.Open();
 
-            using var dataSource = NpgsqlDataSource.Create(connectionPgSqlString);
-            using var cmd = dataSource.CreateCommand("SELECT * FROM nomTablemovie");
+            var query = "SELECT * FROM movie";
+
+            using var cmd = new MySqlCommand(query, connection);
             using var reader = cmd.ExecuteReader();
             {
                 while (reader.Read())
                 {
-                    Movie movieToAdd = new()
+                    var movieToAdd = new Movie
                     {
-                        Id = (int)reader["nomColonneId"],
-                        Title = reader["nomColonneTitle"].ToString(),
-                        ReleaseYear = (int)reader["nomColonneReleaseYear"],
-                        CreateDate = (DateTime)reader["nomColonneCreateDate"],
+                        Id = Convert.ToInt32(reader["id_movie"]),
+                        Title = reader["title"].ToString(),
+                        ReleaseYear = Convert.ToInt32(reader["release_year"]),
+                        CreateDate = Convert.ToDateTime(reader["created_date"])
                     };
+
                     movies.Add(movieToAdd);
                 }
             }
 
-            return movies.ToArray();
+            return movies;
         }
     }
-
-   
 }

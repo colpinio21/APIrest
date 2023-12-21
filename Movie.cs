@@ -7,3 +7,8 @@ public class Movie
     public int ReleaseYear { get; set; }
     public DateTime CreateDate { get; set; }
 }
+
+public class MovieDB
+{
+    
+}
